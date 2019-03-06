@@ -1,0 +1,314 @@
+<ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+  <OperationRequest>
+    <RequestId>8752e56b-ba93-4918-89dc-ef528be6cba8</RequestId>
+    <Arguments>
+      <Argument Name="Keywords" Value="JUL" />
+      <Argument Name="Operation" Value="ItemSearch" />
+      <Argument Name="ResponseGroup" Value="Offers,ItemAttributes" />
+      <Argument Name="SearchIndex" Value="Music" />
+      <Argument Name="Service" Value="AWSECommerceService" />
+      <Argument Name="Timestamp" Value="2019-02-27T11:14:41Z" />
+      <Argument Name="Version" Value="2009-03-31" />
+    </Arguments>
+    <RequestProcessingTime>3.319326877594</RequestProcessingTime>
+  </OperationRequest>
+  <Items>
+    <Request>
+      <IsValid>True</IsValid>
+      <ItemSearchRequest>
+        <Keywords>JUL</Keywords>
+        <ResponseGroup>Offers</ResponseGroup>
+        <ResponseGroup>ItemAttributes</ResponseGroup>
+        <SearchIndex>Music</SearchIndex>
+      </ItemSearchRequest>
+    </Request>
+    <Item>
+      <ASIN>B07DQ2ZYY3</ASIN>
+      <SmallImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61VhtUjHQ8L._SL75_.jpg</URL>
+        <Height Units="pixels">74</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61VhtUjHQ8L._SL160_.jpg</URL>
+        <Height Units="pixels">157</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61VhtUjHQ8L._SL500_.jpg</URL>
+        <Height Units="pixels">492</Height>
+        <Width Units="pixels">500</Width>
+      </LargeImage>
+      <ItemAttributes>
+        <Artist>de Jul et Julien Mari</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>B07DQ2ZYY3</EAN>
+        <EANList>
+          <EANListElement>B07DQ2ZYY3</EANListElement>
+        </EANList>
+        <ProductGroup>Music</ProductGroup>
+        <Title>Inspi d'Ailleurs</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>1199</Amount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <FormattedPrice>EUR 11,99</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+        </Offer>
+      </Offers>
+    </Item>
+    <Item>
+      <ASIN>B076MNJ6YM</ASIN>
+      <SmallImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51AEVHGGoNL._SL75_.jpg</URL>
+        <Height Units="pixels">74</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51AEVHGGoNL._SL160_.jpg</URL>
+        <Height Units="pixels">157</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51AEVHGGoNL._SL500_.jpg</URL>
+        <Height Units="pixels">492</Height>
+        <Width Units="pixels">500</Width>
+      </LargeImage>
+      <ItemAttributes>
+        <Artist>de Jul</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>B076MNJ6YM</EAN>
+        <EANList>
+          <EANListElement>B076MNJ6YM</EANListElement>
+        </EANList>
+        <ProductGroup>Music</ProductGroup>
+        <Title>Jul "la Tête Dans les Nuages"</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>partir</Amount>
+          <CurrencyCode>à</CurrencyCode>
+          <FormattedPrice>à partir de EUR 16,23</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+        </Offer>
+      </Offers>
+    </Item>
+    <Item>
+      <ASIN>B01BGXXD1C</ASIN>
+      <SmallImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/518KZ+IkWCL._SL75_.jpg</URL>
+        <Height Units="pixels">74</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/518KZ+IkWCL._SL160_.jpg</URL>
+        <Height Units="pixels">157</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/518KZ+IkWCL._SL500_.jpg</URL>
+        <Height Units="pixels">492</Height>
+        <Width Units="pixels">500</Width>
+      </LargeImage>
+      <ItemAttributes>
+        <Artist>de Jul</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>B01BGXXD1C</EAN>
+        <EANList>
+          <EANListElement>B01BGXXD1C</EANListElement>
+        </EANList>
+        <ProductGroup>Music</ProductGroup>
+        <Title>My World - Édition Collector (2CD)</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>1399</Amount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <FormattedPrice>EUR 13,99</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+        </Offer>
+      </Offers>
+    </Item>
+    <Item>
+      <ASIN>B01G5W2QNA</ASIN>
+      <SmallImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/411g89eyi3L._SL75_.jpg</URL>
+        <Height Units="pixels">74</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/411g89eyi3L._SL160_.jpg</URL>
+        <Height Units="pixels">157</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/411g89eyi3L._SL500_.jpg</URL>
+        <Height Units="pixels">492</Height>
+        <Width Units="pixels">500</Width>
+      </LargeImage>
+      <ItemAttributes>
+        <Artist>de Jul</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>B01G5W2QNA</EAN>
+        <EANList>
+          <EANListElement>B01G5W2QNA</EANListElement>
+        </EANList>
+        <ProductGroup>Music</ProductGroup>
+        <Title>Jul "Emotions"</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>767</Amount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <FormattedPrice>EUR 7,67</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+        </Offer>
+      </Offers>
+    </Item>
+    <Item>
+      <ASIN>B00WGX6FBM</ASIN>
+      <SmallImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51ltElDJgnL._SL75_.jpg</URL>
+        <Height Units="pixels">74</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51ltElDJgnL._SL160_.jpg</URL>
+        <Height Units="pixels">157</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51ltElDJgnL._SL500_.jpg</URL>
+        <Height Units="pixels">492</Height>
+        <Width Units="pixels">500</Width>
+      </LargeImage>
+      <ItemAttributes>
+        <Artist>de Jul</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>B00WGX6FBM</EAN>
+        <EANList>
+          <EANListElement>B00WGX6FBM</EANListElement>
+        </EANList>
+        <ProductGroup>Music</ProductGroup>
+        <Title>Jul "Je Tourne en Rond"</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>740</Amount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <FormattedPrice>EUR 7,40</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+        </Offer>
+      </Offers>
+    </Item>
+    <Item>
+      <ASIN>B00HPZZNVE</ASIN>
+      <SmallImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51UQj6M6stL._SL75_.jpg</URL>
+        <Height Units="pixels">74</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51UQj6M6stL._SL160_.jpg</URL>
+        <Height Units="pixels">157</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/51UQj6M6stL._SL500_.jpg</URL>
+        <Height Units="pixels">492</Height>
+        <Width Units="pixels">500</Width>
+      </LargeImage>
+      <ItemAttributes>
+        <Artist>de Jul</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>B00HPZZNVE</EAN>
+        <EANList>
+          <EANListElement>B00HPZZNVE</EANListElement>
+        </EANList>
+        <ProductGroup>Music</ProductGroup>
+        <Title>Jul "Dans Ma Paranoia"</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>1099</Amount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <FormattedPrice>EUR 10,99</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+        </Offer>
+      </Offers>
+    </Item>
+  </Items>
+</ItemSearchResponse>
