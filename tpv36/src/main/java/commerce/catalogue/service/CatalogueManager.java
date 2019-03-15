@@ -19,102 +19,111 @@ import commerce.catalogue.domaine.utilitaire.UniqueKeyGenerator;
 
 public class CatalogueManager {
 
-	private List articles; 
-	
+	private List articles;
+
 	public Article chercherArticleParRef(String inRefArticle) throws Exception {
-		Article article ;
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession() ;
+		Article article;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
 			session.beginTransaction();
-			article = (Article) session.get(Article.class, inRefArticle) ;
+			article = (Article) session.get(Article.class, inRefArticle);
 			session.getTransaction().commit();
-		}
-		catch (RuntimeException e) {
+		} catch (RuntimeException e) {
 			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
-			throw e; 
+			throw e;
 		}
-		return (article) ;
+		return (article);
 	}
+
 	public void supprimerArticleParRef(String inRefArticle) throws Exception {
-		Article article ;
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession() ;
+		Article article;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
 			session.beginTransaction();
-			article = (Article)session.get(Article.class, inRefArticle) ;
-			session.delete(article) ;
+			article = (Article) session.get(Article.class, inRefArticle);
+			session.delete(article);
 			session.getTransaction().commit();
-		}
-		catch (RuntimeException e) {
+		} catch (RuntimeException e) {
 			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
-			throw e; 
+			throw e;
 		}
 	}
+
 	public void soumettreArticle(Article inArticle) throws Exception {
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession() ;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
 			session.beginTransaction();
 			if (inArticle.getRefArticle() == null) {
-				inArticle.setRefArticle(new UniqueKeyGenerator().getUniqueId()) ;
-				session.save(inArticle) ;
-			}
-			else {
-				session.saveOrUpdate(inArticle) ;
+				inArticle.setRefArticle(new UniqueKeyGenerator().getUniqueId());
+				session.save(inArticle);
+			} else {
+				session.saveOrUpdate(inArticle);
 			}
 			session.getTransaction().commit();
-		}
-		catch (RuntimeException e) {
+		} catch (RuntimeException e) {
 			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
-			throw e; 
+			throw e;
 		}
 	}
+
 	public void soumettrePiste(Piste inPiste) throws Exception {
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession() ;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
 			session.beginTransaction();
 			if (inPiste.getRefPiste() == null) {
-				inPiste.setRefPiste(new UniqueKeyGenerator().getUniqueId()) ;
-				session.save(inPiste) ;
-			}
-			else {
-				session.saveOrUpdate(inPiste) ;
+				inPiste.setRefPiste(new UniqueKeyGenerator().getUniqueId());
+				session.save(inPiste);
+			} else {
+				session.saveOrUpdate(inPiste);
 			}
 			session.getTransaction().commit();
-		}
-		catch (RuntimeException e) {
+		} catch (RuntimeException e) {
 			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
-			throw e; 
+			throw e;
 		}
 	}
+
 	public void setArticles(List inArticles) throws Exception {
 		articles = inArticles;
 	}
+
 	public List getArticles() throws Exception {
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession() ;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		try {
 			session.beginTransaction();
 			Query query = session.createQuery("from commerce.catalogue.domaine.modele.Article") ;
-//			Question 6.1 td3
-// 			Query query = session.createQuery("from commerce.catalogue.domaine.modele.Livre") ;
-//			Question 6.2 td3
-// 			Query query = session.createQuery("from commerce.catalogue.domaine.modele.Article as m where "
-// 					+" upper(m.titre) like upper(:paramMotCle)") ;
-// 					query.setParameter("paramMotCle", "%illUsiOns%") ;
-//			Question6.3 td3
-//			Query query = session.createQuery("from commerce.catalogue.domaine.modele.Article as a where "
-// 					+" a.prix>10 and a.prix<15") ;
-			
- 			articles = query.list() ;
+			// Query query = session.createQuery("from
+			// commerce.catalogue.domaine.modele.Livre");
+			// articles = query.list();
+			//Query query = session.createQuery("from commerce.catalogue.domaine.modele.Article as m where "
+			//		+ " m.prix>10 and m.prix<15 ");
+			articles = query.list();
 			session.getTransaction().commit();
-		}
-		catch (RuntimeException e) {
+		} catch (RuntimeException e) {
 			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
-			throw e; 
+			throw e;
 		}
-		return articles ;
+		return articles;
+	}
+	
+	public List getArticles(String type) throws Exception {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		try {
+			session.beginTransaction();
+			String selectFromBdd = "from commerce.catalogue.domaine.modele."+type;
+			Query query = session.createQuery(selectFromBdd) ;
+			articles = query.list();
+			session.getTransaction().commit();
+		} catch (RuntimeException e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+			throw e;
+		}
+		return articles;
 	}
 }

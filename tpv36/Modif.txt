@@ -1,0 +1,8 @@
+InitAmazon :
+	Books
+	Equals books
+	creation books
+
+RechercheArticle :
+	Barre en plus + Categorie
+	

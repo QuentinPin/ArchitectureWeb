@@ -43,16 +43,6 @@ public class Piste {
 	}
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((refPiste == null) ? 0 : refPiste.hashCode());
-		result = prime * result + ((titre == null) ? 0 : titre.hashCode());
-		result = prime * result + ((url == null) ? 0 : url.hashCode());
-		return result;
-	}
-
-	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

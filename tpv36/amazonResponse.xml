@@ -1,25 +1,25 @@
 <ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
   <OperationRequest>
-    <RequestId>8752e56b-ba93-4918-89dc-ef528be6cba8</RequestId>
+    <RequestId>4c6ac2c6-9c83-4386-a0de-0300f3237174</RequestId>
     <Arguments>
-      <Argument Name="Keywords" Value="JUL" />
+      <Argument Name="Keywords" Value="jul" />
       <Argument Name="Operation" Value="ItemSearch" />
       <Argument Name="ResponseGroup" Value="Offers,ItemAttributes" />
       <Argument Name="SearchIndex" Value="Music" />
       <Argument Name="Service" Value="AWSECommerceService" />
-      <Argument Name="Timestamp" Value="2019-02-27T11:14:41Z" />
+      <Argument Name="Timestamp" Value="2019-03-15T08:39:46Z" />
       <Argument Name="Version" Value="2009-03-31" />
     </Arguments>
-    <RequestProcessingTime>3.319326877594</RequestProcessingTime>
+    <RequestProcessingTime>2.2570910453796</RequestProcessingTime>
   </OperationRequest>
   <Items>
     <Request>
       <IsValid>True</IsValid>
       <ItemSearchRequest>
-        <Keywords>JUL</Keywords>
+        <Keywords>jul</Keywords>
         <ResponseGroup>Offers</ResponseGroup>
         <ResponseGroup>ItemAttributes</ResponseGroup>
-        <SearchIndex>Music</SearchIndex>
+        <SearchIndex>music</SearchIndex>
       </ItemSearchRequest>
     </Request>
     <Item>
@@ -40,7 +40,7 @@
         <Width Units="pixels">500</Width>
       </LargeImage>
       <ItemAttributes>
-        <Artist>de Jul et Julien Mari</Artist>
+        <Artist>Jul</Artist>
         <Binding>Audio CD</Binding>
         <EAN>B07DQ2ZYY3</EAN>
         <EANList>
@@ -54,54 +54,6 @@
           <Amount>1199</Amount>
           <CurrencyCode>EUR</CurrencyCode>
           <FormattedPrice>EUR 11,99</FormattedPrice>
-        </LowestNewPrice>
-        <TotalNew>1</TotalNew>
-        <TotalUsed>0</TotalUsed>
-        <TotalCollectible>0</TotalCollectible>
-        <TotalRefurbished>0</TotalRefurbished>
-      </OfferSummary>
-      <Offers>
-        <TotalOffers>1</TotalOffers>
-        <TotalOfferPages>1</TotalOfferPages>
-        <Offer>
-          <OfferAttributes>
-            <Condition>New</Condition>
-          </OfferAttributes>
-        </Offer>
-      </Offers>
-    </Item>
-    <Item>
-      <ASIN>B076MNJ6YM</ASIN>
-      <SmallImage>
-        <URL>https://images-eu.ssl-images-amazon.com/images/I/51AEVHGGoNL._SL75_.jpg</URL>
-        <Height Units="pixels">74</Height>
-        <Width Units="pixels">75</Width>
-      </SmallImage>
-      <MediumImage>
-        <URL>https://images-eu.ssl-images-amazon.com/images/I/51AEVHGGoNL._SL160_.jpg</URL>
-        <Height Units="pixels">157</Height>
-        <Width Units="pixels">160</Width>
-      </MediumImage>
-      <LargeImage>
-        <URL>https://images-eu.ssl-images-amazon.com/images/I/51AEVHGGoNL._SL500_.jpg</URL>
-        <Height Units="pixels">492</Height>
-        <Width Units="pixels">500</Width>
-      </LargeImage>
-      <ItemAttributes>
-        <Artist>de Jul</Artist>
-        <Binding>Audio CD</Binding>
-        <EAN>B076MNJ6YM</EAN>
-        <EANList>
-          <EANListElement>B076MNJ6YM</EANListElement>
-        </EANList>
-        <ProductGroup>Music</ProductGroup>
-        <Title>Jul "la Tête Dans les Nuages"</Title>
-      </ItemAttributes>
-      <OfferSummary>
-        <LowestNewPrice>
-          <Amount>partir</Amount>
-          <CurrencyCode>à</CurrencyCode>
-          <FormattedPrice>à partir de EUR 16,23</FormattedPrice>
         </LowestNewPrice>
         <TotalNew>1</TotalNew>
         <TotalUsed>0</TotalUsed>
@@ -136,7 +88,7 @@
         <Width Units="pixels">500</Width>
       </LargeImage>
       <ItemAttributes>
-        <Artist>de Jul</Artist>
+        <Artist>Jul</Artist>
         <Binding>Audio CD</Binding>
         <EAN>B01BGXXD1C</EAN>
         <EANList>
@@ -184,7 +136,7 @@
         <Width Units="pixels">500</Width>
       </LargeImage>
       <ItemAttributes>
-        <Artist>de Jul</Artist>
+        <Artist>Jul</Artist>
         <Binding>Audio CD</Binding>
         <EAN>B01G5W2QNA</EAN>
         <EANList>
@@ -195,9 +147,105 @@
       </ItemAttributes>
       <OfferSummary>
         <LowestNewPrice>
-          <Amount>767</Amount>
+          <Amount>1199</Amount>
           <CurrencyCode>EUR</CurrencyCode>
-          <FormattedPrice>EUR 7,67</FormattedPrice>
+          <FormattedPrice>EUR 11,99</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+        </Offer>
+      </Offers>
+    </Item>
+    <Item>
+      <ASIN>B01M71BE80</ASIN>
+      <SmallImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61k8-LxIe-L._SL75_.jpg</URL>
+        <Height Units="pixels">74</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61k8-LxIe-L._SL160_.jpg</URL>
+        <Height Units="pixels">157</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61k8-LxIe-L._SL500_.jpg</URL>
+        <Height Units="pixels">492</Height>
+        <Width Units="pixels">500</Width>
+      </LargeImage>
+      <ItemAttributes>
+        <Artist>Jul</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>B01M71BE80</EAN>
+        <EANList>
+          <EANListElement>B01M71BE80</EANListElement>
+        </EANList>
+        <ProductGroup>Music</ProductGroup>
+        <Title>Jul "l'OVNI"</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>999</Amount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <FormattedPrice>EUR 9,99</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <Offer>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+        </Offer>
+      </Offers>
+    </Item>
+    <Item>
+      <ASIN>B00KB4CFVC</ASIN>
+      <SmallImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61p6j3W9xgL._SL75_.jpg</URL>
+        <Height Units="pixels">74</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61p6j3W9xgL._SL160_.jpg</URL>
+        <Height Units="pixels">157</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>https://images-eu.ssl-images-amazon.com/images/I/61p6j3W9xgL._SL500_.jpg</URL>
+        <Height Units="pixels">492</Height>
+        <Width Units="pixels">500</Width>
+      </LargeImage>
+      <ItemAttributes>
+        <Artist>Jul</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>B00KB4CFVC</EAN>
+        <EANList>
+          <EANListElement>B00KB4CFVC</EANListElement>
+        </EANList>
+        <ProductGroup>Music</ProductGroup>
+        <Title>Jul "Lacrizeomic"</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>1099</Amount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <FormattedPrice>EUR 10,99</FormattedPrice>
         </LowestNewPrice>
         <TotalNew>1</TotalNew>
         <TotalUsed>0</TotalUsed>
@@ -232,7 +280,7 @@
         <Width Units="pixels">500</Width>
       </LargeImage>
       <ItemAttributes>
-        <Artist>de Jul</Artist>
+        <Artist>Jul</Artist>
         <Binding>Audio CD</Binding>
         <EAN>B00WGX6FBM</EAN>
         <EANList>
@@ -243,57 +291,9 @@
       </ItemAttributes>
       <OfferSummary>
         <LowestNewPrice>
-          <Amount>740</Amount>
+          <Amount>1500</Amount>
           <CurrencyCode>EUR</CurrencyCode>
-          <FormattedPrice>EUR 7,40</FormattedPrice>
-        </LowestNewPrice>
-        <TotalNew>1</TotalNew>
-        <TotalUsed>0</TotalUsed>
-        <TotalCollectible>0</TotalCollectible>
-        <TotalRefurbished>0</TotalRefurbished>
-      </OfferSummary>
-      <Offers>
-        <TotalOffers>1</TotalOffers>
-        <TotalOfferPages>1</TotalOfferPages>
-        <Offer>
-          <OfferAttributes>
-            <Condition>New</Condition>
-          </OfferAttributes>
-        </Offer>
-      </Offers>
-    </Item>
-    <Item>
-      <ASIN>B00HPZZNVE</ASIN>
-      <SmallImage>
-        <URL>https://images-eu.ssl-images-amazon.com/images/I/51UQj6M6stL._SL75_.jpg</URL>
-        <Height Units="pixels">74</Height>
-        <Width Units="pixels">75</Width>
-      </SmallImage>
-      <MediumImage>
-        <URL>https://images-eu.ssl-images-amazon.com/images/I/51UQj6M6stL._SL160_.jpg</URL>
-        <Height Units="pixels">157</Height>
-        <Width Units="pixels">160</Width>
-      </MediumImage>
-      <LargeImage>
-        <URL>https://images-eu.ssl-images-amazon.com/images/I/51UQj6M6stL._SL500_.jpg</URL>
-        <Height Units="pixels">492</Height>
-        <Width Units="pixels">500</Width>
-      </LargeImage>
-      <ItemAttributes>
-        <Artist>de Jul</Artist>
-        <Binding>Audio CD</Binding>
-        <EAN>B00HPZZNVE</EAN>
-        <EANList>
-          <EANListElement>B00HPZZNVE</EANListElement>
-        </EANList>
-        <ProductGroup>Music</ProductGroup>
-        <Title>Jul "Dans Ma Paranoia"</Title>
-      </ItemAttributes>
-      <OfferSummary>
-        <LowestNewPrice>
-          <Amount>1099</Amount>
-          <CurrencyCode>EUR</CurrencyCode>
-          <FormattedPrice>EUR 10,99</FormattedPrice>
+          <FormattedPrice>EUR 15,00</FormattedPrice>
         </LowestNewPrice>
         <TotalNew>1</TotalNew>
         <TotalUsed>0</TotalUsed>

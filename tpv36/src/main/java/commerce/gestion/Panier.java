@@ -37,6 +37,7 @@ public class Panier {
 			LignePanier ligne=(LignePanier)i.next() ;
 			ligne.recalculer();
 			total += ligne.getPrixTotal();
+			total = ((int)(total*100)) /100.0;
 		}
 	}
 	public void ajouterLigne(Article inArticle) {

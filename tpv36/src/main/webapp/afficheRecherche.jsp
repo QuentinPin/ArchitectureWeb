@@ -1,3 +1,5 @@
+<%@page import="java.awt.geom.Arc2D"%>
+<%@page import="commerce.catalogue.service.InitAmazon"%>
 <%@ page pageEncoding="UTF-8"%>
 <%@ include file="enTetePage.html"%>
 <%@ page import="commerce.catalogue.service.CatalogueManager"%>
@@ -8,23 +10,48 @@
 <%@ page import="java.util.Iterator"%>
 <%@ page import="java.util.List"%>
 <%
-	if (session.getAttribute("panier")==null) {
+	if (session.getAttribute("panier") == null) {
 		response.sendRedirect("./index.jsp");
 	} else {
-		CatalogueManager catalogueManager = (CatalogueManager) application
-									.getAttribute("catalogueManager");
-		List<Article> articles = catalogueManager.getArticles();
-		Iterator<Article> listeDesArticles ;
+		CatalogueManager catalogueManager = (CatalogueManager) application.getAttribute("catalogueManager");
+		List<Article> articles = catalogueManager.getArticles();;
+		Iterator<Article> listeDesArticles;
 		Livre livre = null;
 		Musique musique = null;
 		Article article;
+		String classHtmlBasic = "menu-item menu-item-type-custom menu-item-object-custom";
+		String classHtmlCurrent = "menu-item menu-item-type-custom menu-item-object-custom current-menu-item";
+		String classBook = classHtmlBasic;
+		String classDvd = classHtmlBasic;
+		String classMusic = classHtmlBasic;
+
+		if (null == (request.getParameter("type"))) {
+			classDvd = classHtmlBasic;
+			classMusic = classHtmlBasic;
+			classBook = classHtmlBasic;
+			articles = catalogueManager.getArticles();
+		} else if (request.getParameter("type").equals("Dvd")) {
+			classDvd = classHtmlCurrent;
+			classMusic = classHtmlBasic;
+			classBook = classHtmlBasic;
+			articles = catalogueManager.getArticles("Dvd");
+		} else if ((request.getParameter("type").equals("Livre"))) {
+			classDvd = classHtmlBasic;
+			classMusic = classHtmlBasic;
+			classBook = classHtmlCurrent;
+			articles = catalogueManager.getArticles("Livre");
+		} else if (request.getParameter("type").equals("Musique")) {
+			classDvd = classHtmlBasic;
+			classMusic = classHtmlCurrent;
+			classBook = classHtmlBasic;
+			articles = catalogueManager.getArticles("Musique");
+		}
 %>
 <nav id="navigation" class="col-full" role="navigation">
 	<ul id="main-nav" class="nav fl">
 		<li id="menu-item-290"
 			class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item">
-			<a href="<%=response.encodeURL("./afficheRecherche.jsp")%>">Rechercher
-				un article</a>
+			<a href="<%=response.encodeURL("./afficheRecherche.jsp")%>">Tous les articles</a>
 		</li>
 		<li id="menu-item-290"
 			class="menu-item menu-item-type-custom menu-item-object-custom">
@@ -32,6 +59,25 @@
 		</li>
 	</ul>
 </nav>
+
+
+
+
+<nav id="navigation" class="col-full" role="navigation">
+	<p class="h5">Type : </p>
+	<ul id="main-nav" class="nav fl">
+		<li id="menu-item-290" class="<%=classBook%>"><a
+			href="<%=response.encodeURL("./afficheRecherche.jsp?type=Livre")%>">Livre</a>
+		</li>
+		<li id="menu-item-290" class="<%=classMusic%>"><a
+			href="<%=response.encodeURL("./afficheRecherche.jsp?type=Musique")%>">Musique</a>
+		</li>
+		<li id="menu-item-290" class="<%=classDvd%>"><a
+			href="<%=response.encodeURL("./afficheRecherche.jsp?type=Dvd")%>">DVD</a>
+		</li>
+	</ul>
+</nav>
+
 <div id="content" class="site-content" tabindex="-1">
 	<div class="col-full">
 		<div class="primary" class="content-area">
@@ -39,37 +85,37 @@
 				<h1 class="page-title">Résultats de la recherche</h1>
 				<ul class="products">
 					<%
-							listeDesArticles = articles.iterator() ;
+						listeDesArticles = articles.iterator();
 							while (listeDesArticles.hasNext()) {
 								article = (Article) listeDesArticles.next();
 					%>
 					<li class="product type-product"><a
-						href="<%=response.encodeURL("./controlePanier.jsp?refArticle="
-								+ article.getRefArticle()
-						+ "&amp;commande=ajouterLigne")%>"> <img
-							src="<% if (article.getImage().startsWith("http")) 
-									    out.print(article.getImage()) ;
-							        else
-							        	out.print("./images/"+article.getImage()) ; %>"
+						href="<%=response.encodeURL("./controlePanier.jsp?refArticle=" + article.getRefArticle()
+							+ "&amp;commande=ajouterLigne")%>">
+							<img
+							src="<%if (article.getImage().startsWith("http"))
+						out.print(article.getImage());
+					else
+						out.print("./images/" + article.getImage());%>"
 							class="attachment-shop_catalog wp-post-image" alt="poster_2_up"
-							height="300" width="300"/>
+							height="300" width="300" />
 							<h3><%=article.getTitre()%></h3> <span class="price"><ins>
 									<span class="amount"><%=article.getPrix()%> €</span>
 								</ins></span>
 
 					</a> <a
-						href="<%=response.encodeURL("./controlePanier.jsp?refArticle="
-								+ article.getRefArticle()
-						+ "&amp;commande=ajouterLigne")%>"
+						href="<%=response.encodeURL("./controlePanier.jsp?refArticle=" + article.getRefArticle()
+							+ "&amp;commande=ajouterLigne")%>"
 						class="button add_to_cart_button product_type_simple">Mettre
-							dans le panier</a>
-<%
-                            	if (article instanceof Musique) { 
-                            		musique = (Musique) article;
-                            		if (musique.getPistes().size() > 0) {
-%>
-						<div id="jquery_jplayer_<%=article.getRefArticle()%>" class="jp-jplayer"></div>
-						<div id="jp_container_<%=article.getRefArticle()%>" class="jp-audio" role="application">
+							dans le panier</a> <%
+ 	if (article instanceof Musique) {
+ 				musique = (Musique) article;
+ 				if (musique.getPistes().size() > 0) {
+ %>
+						<div id="jquery_jplayer_<%=article.getRefArticle()%>"
+							class="jp-jplayer"></div>
+						<div id="jp_container_<%=article.getRefArticle()%>"
+							class="jp-audio" role="application">
 							<div class="jp-type-playlist">
 								<div class="jp-gui jp-interface">
 									<div class="jp-controls-holder">
@@ -93,11 +139,10 @@
 										plugin</a>.
 								</div>
 							</div>
-						</div> 
-<%
-                            		}
-                            	}
-							}
+						</div> <%
+ 	}
+ 			}
+ 		}
  %>
 				</ul>
 			</section>
@@ -107,36 +152,25 @@
 <script type="text/javascript">
 window.addEventListener("load", myFunction, false);
 function myFunction(event) {
-<%
-		listeDesArticles = articles.iterator() ;
-		while (listeDesArticles.hasNext()) {
-			article = (Article) listeDesArticles.next();
-			if (article instanceof Musique) {
-%>
+<%listeDesArticles = articles.iterator();
+				while (listeDesArticles.hasNext()) {
+					article = (Article) listeDesArticles.next();
+					if (article instanceof Musique) {%>
 	var myPlaylist_<%=article.getRefArticle()%> = new jPlayerPlaylist({
 	cssSelectorAncestor : "#jp_container_<%=article.getRefArticle()%>",
-	jPlayer: "#jquery_jplayer_<%=article.getRefArticle()%>"}, [<%
-	musique = (Musique) article;
-				if (musique.getPistes().size() > 0) {
-					Iterator<Piste> itPistes = musique.getPistes()
-							.iterator();
-					Piste unePiste;
-					while (itPistes.hasNext()) {
-						unePiste = itPistes.next();
-%>
-{ title:"<%=unePiste.getTitre().replace("\"", "\\\"" )%>", mp3:"<%=unePiste.getUrl()%>" },<%
-
-					}
-				}
-%>
+	jPlayer: "#jquery_jplayer_<%=article.getRefArticle()%>"}, [<%musique = (Musique) article;
+						if (musique.getPistes().size() > 0) {
+							Iterator<Piste> itPistes = musique.getPistes().iterator();
+							Piste unePiste;
+							while (itPistes.hasNext()) {
+								unePiste = itPistes.next();%>
+{ title:"<%=unePiste.getTitre().replace("\"", "\\\"")%>", mp3:"<%=unePiste.getUrl()%>" },<%}
+						}%>
 ], { swfPath : "/js/jplayer-2.9.2/jplayer", supplied : "mp3", wmode:
 "window", useStateClassSkin: true, autoBlur: false, smoothPlayBar: true,
 keyEnabled: true });
-<%
-
-			}
-		}
-%>
+<%}
+				}%>
 	var jp_playlist_tab = document.getElementsByClassName("jp-playlist") ;
  	for (i = 0; i < jp_playlist_tab.length; i++) {
     	jp_playlist_tab[i].style.display = "none";

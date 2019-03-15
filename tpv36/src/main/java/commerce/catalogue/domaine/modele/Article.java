@@ -21,8 +21,8 @@ import javax.persistence.DiscriminatorValue;
 )
 @DiscriminatorValue("article")
 public class Article {
-	private String refArticle; 
-	private String titre;
+	private String refArticle; 	//ASIN
+	private String titre;		
 	private String image;
 	private double prix;
 	private int disponibilite;
